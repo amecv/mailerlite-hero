@@ -1,0 +1,23 @@
+{
+  "name": "mailerlite-hero",
+  "version": "1.0.0",
+  "description": "Hero Section for MailerLite Homepage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./src/main.dev.css -o ./src/styles/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amecv/mailerlite-hero.git"
+  },
+  "author": "Amec Velasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amecv/mailerlite-hero/issues"
+  },
+  "homepage": "https://github.com/amecv/mailerlite-hero#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
