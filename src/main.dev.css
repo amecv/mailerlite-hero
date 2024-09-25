@@ -9,60 +9,60 @@
     font-weight: 100 1000;
     font-style: oblique -11 0;
   }
+
+  html, body {
+    color: #1E4035;
+  }
   
-  /*
-    Josh's Custom CSS Reset
-    https://www.joshwcomeau.com/css/custom-css-reset/
-  */
+}
+/* Custom Grid Code*/
+.bento-grid {
+  grid-template-areas:
+  "first first second second"  
+  "first first third fourth"
+  "fifth fifth fifth fifth";
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+.bento-grid > * > div {
+  background-image: url(../images/gradient-background.webp) ;
+  background-size: min(1100px, calc(100vw - 96px));
+  width: 100%;
+  height: 100%;
+}
+
+.bento-grid > *:first-child {
+  grid-area: first;
+  background-position: top left;
+}
+
+.bento-grid > *:nth-child(2) {
+  grid-area: second;
+
+  & > div {
+    background-position: top right;
   }
+}
 
-  * {
-    margin: 0;
+.bento-grid > *:nth-child(3) {
+  grid-area: third;
+
+  & > div {
+    background-position: center right 30%;
   }
+}
 
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+.bento-grid > *:nth-child(4) {
+  grid-area: fourth;
+
+  & > div {
+    background-position: center right;
   }
+}
 
-  img,
-  picture,
-  video,
-  canvas,
-  svg {
-    display: block;
-    max-width: 100%;
+.bento-grid > *:nth-child(5) {
+  grid-area: fifth;
+
+  & > div {
+    background-position: bottom left;
   }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    overflow-wrap: break-word;
-  }
-
-  #root,
-  #__next {
-    isolation: isolate;
-  }
-
-  /*
-  Font Styling
-*/
 }
