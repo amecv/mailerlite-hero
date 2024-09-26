@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const wordNodes = []
 
     const scrollDelay = 2000
-    const animationDuration = window.getComputedStyle(textScroller).getPropertyValue('transition-duration') + 1
+    const animationDuration = window.getComputedStyle(textScroller).getPropertyValue('transition-duration')
 
     words.forEach(word => {
       const wordNode = document.createElement('span')
