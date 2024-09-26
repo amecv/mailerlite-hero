@@ -27,12 +27,12 @@ button.outline-button {
 }
 
 .text-scroller {
-  @apply relative inline-grid h-[1.15em] leading-none overflow-y-clip transition-all duration-700 before:transition-all before:duration-700 before:block before:absolute before:w-[110%] before:h-[76px] before:left-1/2 before:top-1/2 before:bg-green-100 before:rounded-lg before:-z-10 before:-translate-x-1/2 before:-translate-y-1/2;
+  @apply relative inline-grid h-[1.15em] leading-none overflow-y-clip duration-700 before:transition-all before:duration-700 before:block before:absolute before:w-[110%] before:h-[76px] before:left-1/2 before:top-1/2 before:bg-green-100 before:rounded-lg before:-z-10 before:-translate-x-1/2 before:-translate-y-1/2;
 
   & span {
     grid-area: 1/1;
     will-change: transform;
-    @apply transition-all duration-700 ease-out-back;
+    @apply transition motion-reduce:transition-none duration-700 ease-out-back;
   }
 
   & .incoming-word {
