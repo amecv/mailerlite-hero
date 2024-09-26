@@ -1028,6 +1028,11 @@ html, body {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1061,11 +1066,6 @@ html, body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -1208,6 +1208,7 @@ button.outline-button {
 .text-scroller {
   & span {
     grid-area: 1/1;
+    will-change: transform;
   }
   & span {
     transition-property: transform;

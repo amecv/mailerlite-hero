@@ -31,6 +31,7 @@ button.outline-button {
 
   & span {
     grid-area: 1/1;
+    will-change: transform;
     @apply transition-transform duration-700 ease-out-back;
   }
 
@@ -39,7 +40,7 @@ button.outline-button {
   }
 
   & .outgoing-word {
-    @apply translate-y-full bg-fuchsia-500;
+    @apply translate-y-full;
   }
 }
 
