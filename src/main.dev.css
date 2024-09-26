@@ -11,58 +11,89 @@
   }
 
   html, body {
-    color: #1E4035;
+    @apply text-[#1E4035]
   }
   
 }
+
+/* Button */
+
+button {
+  @apply px-6 pt-2 pb-3 bg-[#09c269] rounded-md text-white antialiased;
+}
+
+button.outline-button {
+  @apply bg-transparent border border-gray-500 text-gray-500;
+}
+
+.text-scroller {
+  @apply relative inline-grid h-[1.25em] leading-none overflow-y-clip transition-all duration-700 before:transition-all before:duration-700 before:block before:absolute before:w-[110%] before:h-[76px] before:left-1/2 before:top-1/2 before:bg-green-100 before:rounded-lg before:-z-10 before:-translate-x-1/2 before:-translate-y-1/2;
+
+  & span {
+    grid-area: 1/1;
+    @apply transition-transform duration-700 ease-out-back;
+  }
+
+  & .incoming-word {
+    @apply -translate-y-full;
+  }
+
+  & .outgoing-word {
+    @apply translate-y-full bg-fuchsia-500;
+  }
+}
+
+/* Dark Overlay */
+.dark-overlay {
+  @apply isolate before:absolute before:inset-0 before:bg-[#0F1D18] before:opacity-50 before:-z-10;
+  
+  &::before {
+    border-radius: inherit;
+  }
+}
+
 /* Custom Grid Code*/
 .bento-grid {
   grid-template-areas:
-  "first first second second"  
+  "first first second second"
+  "first first second second" 
+  "first first third fourth"
   "first first third fourth"
   "fifth fifth fifth fifth";
 }
 
-.bento-grid > * > div {
+:where(.bento-grid > * > div) {
   background-image: url(../images/gradient-background.webp) ;
   background-size: min(1100px, calc(100vw - 96px));
-  width: 100%;
-  height: 100%;
+  @apply w-full h-full;
 }
 
 .bento-grid > *:first-child {
   grid-area: first;
-  background-position: top left;
 }
 
 .bento-grid > *:nth-child(2) {
   grid-area: second;
-
-  & > div {
-    background-position: top right;
-  }
 }
 
 .bento-grid > *:nth-child(3) {
   grid-area: third;
-
-  & > div {
-    background-position: center right 30%;
-  }
 }
 
 .bento-grid > *:nth-child(4) {
   grid-area: fourth;
-
-  & > div {
-    background-position: center right;
-  }
 }
 
 .bento-grid > *:nth-child(5) {
   grid-area: fifth;
+}
 
-  & > div {
-    background-position: bottom left;
+@media (min-width: 650px)and (max-width: 994px) {
+  .bento-grid {
+    grid-template-areas:
+    "first first first first"
+    "second second second second"
+    "third third fourth fourth"
+    "fifth fifth fifth fifth";
   }
 }
