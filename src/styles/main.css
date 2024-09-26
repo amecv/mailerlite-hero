@@ -1085,6 +1085,10 @@ html, body {
   transition-duration: 200ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -1111,6 +1115,23 @@ button {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+button:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition-property: none;
+  }
 }
 
 button.outline-button {
@@ -1373,6 +1394,10 @@ button.outline-button {
 .before\:duration-700::before {
   content: var(--tw-content);
   transition-duration: 700ms;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
 
 @media (prefers-reduced-motion: reduce) {

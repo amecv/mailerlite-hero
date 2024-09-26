@@ -19,7 +19,7 @@
 /* Button */
 
 button {
-  @apply text-lg px-4 py-3 leading-tight flex bg-[#09c269] rounded-md text-white antialiased;
+  @apply text-lg px-4 py-3 leading-tight flex bg-[#09c269] rounded-md text-white antialiased transition duration-300 motion-reduce:transition-none hover:opacity-80 hover:-translate-y-1;
 }
 
 button.outline-button {
