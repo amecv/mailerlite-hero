@@ -89,6 +89,26 @@ button.outline-button {
   grid-area: fifth;
 }
 
+.bento-grid a .bento-content, .bento-grid a .arrow, .bento-grid a img {
+  @apply transition-transform duration-500 ease-out-back;
+}
+
+.bento-grid a .arrow {
+  @apply inline-block;
+}
+
+.bento-grid a:hover .arrow {
+  @apply translate-x-[5px]
+}
+
+.bento-grid a:hover .bento-content {
+  @apply scale-[1.015]
+}
+
+.bento-grid a:hover img {
+  @apply translate-y-[-5px] scale-[1.015]
+}
+
 @media (min-width: 650px)and (max-width: 994px) {
   .bento-grid {
     grid-template-areas:
